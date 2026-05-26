@@ -7,68 +7,51 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream: #FAF7F2;
-    --warm-white: #FFFDF9;
-    --bark: #3D2B1F;
-    --bark-light: #7A5C4A;
-    --bark-muted: #B89D8C;
-    --sage: #7A9B7C;
-    --sage-light: #C2D9C3;
-    --sage-pale: #EAF2EB;
-    --amber: #D4843A;
-    --amber-light: #F5DFC0;
-    --amber-pale: #FDF3E7;
-    --violet: #7B6FA0;
-    --violet-light: #C8C2DC;
-    --violet-pale: #EDEAF5;
-    --rose: #C4706A;
-    --rose-pale: #FAECEB;
-    --sand: #E8DDD0;
-    --border: #E2D9CE;
-    --text: #2C1F14;
-    --text-muted: #8B7567;
-    --text-light: #B5A396;
-    --shadow: 0 2px 12px rgba(61,43,31,0.08);
+    --cream: #F0EBE3;
+    --warm-white: #FAF6F1;
+    --bark: #1A1A1A;
+    --bark-light: #3A3A3A;
+    --bark-muted: #8B7355;
+    --sage: #6B8F6B;
+    --sage-light: #A8C4A8;
+    --sage-pale: #E8F0E8;
+    --amber: #8B7355;
+    --amber-light: #C4AD8A;
+    --amber-pale: #F0E8DC;
+    --violet: #5C5470;
+    --violet-light: #A09AB8;
+    --violet-pale: #ECEAF2;
+    --rose: #A0522D;
+    --rose-pale: #F2E4D8;
+    --sand: #E0D5C8;
+    --border: #C8BAA8;
+    --text: #1A1A1A;
+    --text-muted: #6B5D4F;
+    --text-light: #9A8878;
+    --shadow: 0 2px 12px rgba(26,26,26,0.10);
     --radius: 14px;
     --radius-sm: 8px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); min-height: 100vh; }
-
-  /* HEADER */
-  header { background: var(--bark); color: var(--cream); padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; }
+  header { background: #1A1A1A; color: #F0EBE3; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid #8B7355; }
   .logo { font-family: 'DM Serif Display', serif; font-size: 26px; display: flex; align-items: center; gap: 10px; }
-  .logo-paw { width: 32px; height: 32px; background: var(--amber); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+  .logo-paw { width: 32px; height: 32px; background: #8B7355; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; }
   .header-sub { font-size: 13px; color: var(--bark-muted); font-weight: 300; }
-  .admin-banner { background: var(--amber-pale); border-bottom: 1px solid var(--amber-light); padding: 8px 40px; font-size: 12px; color: var(--amber); font-weight: 500; display: flex; align-items: center; gap: 6px; }
-  .client-banner { background: var(--sage-pale); border-bottom: 1px solid var(--sage-light); padding: 10px 40px; font-size: 13px; color: #3A6E3C; display: flex; align-items: center; gap: 8px; }
-
-  /* LOADING */
+  .admin-banner { background: #F0E8DC; border-bottom: 1px solid #C4AD8A; padding: 8px 40px; font-size: 12px; color: #6B5D4F; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+  .client-banner { background: #E8F0E8; border-bottom: 1px solid #A8C4A8; padding: 10px 40px; font-size: 13px; color: #3A6E3C; display: flex; align-items: center; gap: 8px; }
   .loading-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 40vh; gap: 14px; }
   .spinner { width: 36px; height: 36px; border: 3px solid var(--border); border-top-color: var(--amber); border-radius: 50%; animation: spin 0.8s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
   .loading-text { font-size: 14px; color: var(--text-muted); }
-
-  /* SETUP SCREEN */
-  .setup-screen { max-width: 520px; margin: 60px auto; padding: 0 24px; }
-  .setup-card { background: var(--warm-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow); }
-  .setup-card h2 { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--bark); margin-bottom: 8px; }
-  .setup-card p { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6; }
-  .setup-field { margin-bottom: 14px; }
-  .setup-field label { display: block; font-size: 12px; font-weight: 500; color: var(--text-muted); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
-  .setup-field input { width: 100%; font-size: 13px; padding: 9px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--cream); color: var(--text); font-family: 'DM Sans', sans-serif; }
-  .setup-field input:focus { outline: none; border-color: var(--amber); box-shadow: 0 0 0 3px var(--amber-light); }
-  .setup-note { font-size: 12px; color: var(--text-light); background: var(--amber-pale); border-radius: 8px; padding: 10px 12px; border-left: 3px solid var(--amber); margin-bottom: 18px; line-height: 1.5; }
-
-  /* MAIN */
   main { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
   .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 24px; }
   .metric { background: var(--warm-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); position: relative; overflow: hidden; }
   .metric::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
-  .metric.m-sage::before { background: var(--sage); }
-  .metric.m-amber::before { background: var(--amber); }
-  .metric.m-violet::before { background: var(--violet); }
-  .metric.m-rose::before { background: var(--rose); }
+  .metric.m-sage::before { background: #6B8F6B; }
+  .metric.m-amber::before { background: #8B7355; }
+  .metric.m-violet::before { background: #1A1A1A; }
+  .metric.m-rose::before { background: #A0522D; }
   .metric label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 500; display: block; margin-bottom: 6px; }
   .metric .val { font-family: 'DM Serif Display', serif; font-size: 28px; line-height: 1; }
   .metric .sub { font-size: 12px; color: var(--text-light); margin-top: 4px; }
@@ -77,8 +60,6 @@
   .card { background: var(--warm-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; box-shadow: var(--shadow); }
   .card-title { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--bark); margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
   .card-title-icon { width: 28px; height: 28px; background: var(--sand); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-
-  /* CALENDAR */
   .cal-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
   .cal-nav button { background: var(--sand); border: none; border-radius: 8px; width: 32px; height: 32px; cursor: pointer; font-size: 16px; color: var(--bark); display: flex; align-items: center; justify-content: center; transition: background 0.15s; }
   .cal-nav button:hover { background: var(--border); }
@@ -96,26 +77,20 @@
   .leg { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-muted); }
   .leg-dot { width: 12px; height: 12px; border-radius: 4px; }
   .tip { font-size: 12px; color: var(--text-light); margin-top: 10px; padding: 8px 12px; background: var(--amber-pale); border-radius: 8px; border-left: 3px solid var(--amber); }
-
-  /* FORM */
   .mode-tabs { display: flex; gap: 6px; margin-bottom: 16px; background: var(--cream); padding: 4px; border-radius: 10px; border: 1px solid var(--border); }
   .mode-tab { flex: 1; font-size: 12px; font-weight: 500; padding: 7px 8px; border-radius: 7px; border: none; cursor: pointer; background: none; color: var(--text-muted); transition: all 0.15s; font-family: 'DM Sans', sans-serif; }
-  .mode-tab.active { background: var(--warm-white); color: var(--bark); box-shadow: 0 1px 4px rgba(61,43,31,0.1); }
+  .mode-tab.active { background: var(--warm-white); color: var(--bark); box-shadow: 0 1px 4px rgba(26,26,26,0.1); }
   .form-row { margin-bottom: 12px; }
   .form-row label { display: block; font-size: 12px; font-weight: 500; color: var(--text-muted); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.05em; }
   .form-row input, .form-row select { width: 100%; font-size: 14px; padding: 9px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--cream); color: var(--text); font-family: 'DM Sans', sans-serif; transition: border-color 0.15s, box-shadow 0.15s; -webkit-appearance: none; appearance: none; }
   .form-row input:focus, .form-row select:focus { outline: none; border-color: var(--amber); box-shadow: 0 0 0 3px var(--amber-light); background: var(--warm-white); }
   .form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .btn-add { width: 100%; padding: 11px; border-radius: var(--radius-sm); border: none; background: var(--bark); color: var(--cream); font-size: 14px; font-weight: 500; cursor: pointer; margin-top: 6px; font-family: 'DM Sans', sans-serif; transition: background 0.15s, transform 0.1s; }
-  .btn-add:hover { background: var(--bark-light); }
+  .btn-add { width: 100%; padding: 11px; border-radius: var(--radius-sm); border: none; background: #1A1A1A; color: #F0EBE3; font-size: 14px; font-weight: 500; cursor: pointer; margin-top: 6px; font-family: 'DM Sans', sans-serif; transition: background 0.15s, transform 0.1s; }
+  .btn-add:hover { background: #3A3A3A; }
   .btn-add:active { transform: scale(0.99); }
   .btn-add:disabled { opacity: 0.6; cursor: not-allowed; }
   .btn-danger { width: 100%; padding: 9px; border-radius: var(--radius-sm); border: 1px solid var(--rose); background: none; color: var(--rose); font-size: 13px; cursor: pointer; margin-top: 10px; font-family: 'DM Sans', sans-serif; transition: background 0.15s; }
   .btn-danger:hover { background: var(--rose-pale); }
-  .btn-secondary { width: 100%; padding: 9px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: none; color: var(--text-muted); font-size: 13px; cursor: pointer; margin-top: 8px; font-family: 'DM Sans', sans-serif; transition: background 0.15s; }
-  .btn-secondary:hover { background: var(--sand); }
-
-  /* BOOKING LIST */
   .booking-list { display: flex; flex-direction: column; gap: 10px; }
   .booking-item { border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; display: flex; justify-content: space-between; align-items: flex-start; background: var(--cream); transition: box-shadow 0.15s; }
   .booking-item:hover { box-shadow: var(--shadow); }
@@ -131,14 +106,10 @@
   .del-btn:hover { color: var(--rose); background: var(--rose-pale); }
   .empty-state { text-align: center; color: var(--text-light); font-size: 14px; padding: 28px 0; font-style: italic; }
   .paw-hint { font-size: 28px; margin-bottom: 8px; }
-
-  /* SYNC STATUS */
   .sync-status { font-size: 12px; color: var(--text-light); text-align: right; margin-bottom: 8px; min-height: 18px; }
   .sync-status.syncing { color: var(--amber); }
   .sync-status.ok { color: var(--sage); }
   .sync-status.err { color: var(--rose); }
-
-  /* CLIENT VIEW */
   .client-intro { text-align: center; padding: 24px 0 32px; }
   .client-intro h1 { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--bark); margin-bottom: 10px; }
   .client-intro p { font-size: 15px; color: var(--text-muted); max-width: 460px; margin: 0 auto; line-height: 1.6; }
@@ -150,7 +121,6 @@
   .avail-date-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text); padding: 8px 12px; background: var(--sage-pale); border-radius: var(--radius-sm); border: 1px solid var(--sage-light); }
   .contact-cta { max-width: 520px; margin: 20px auto 0; text-align: center; font-size: 14px; color: var(--text-muted); padding: 16px 20px; border: 1px dashed var(--border); border-radius: var(--radius); }
   .contact-cta strong { color: var(--bark); }
-
   @media (max-width: 700px) {
     .metrics { grid-template-columns: repeat(2, 1fr); }
     .two-col { grid-template-columns: 1fr; }
@@ -161,508 +131,55 @@
 </style>
 </head>
 <body>
-
 <header>
-  <div class="logo"><div class="logo-paw">🐾</div>Paw Planner</div>
+  <div class="logo"><div class="logo-paw">🐾</div>Becca's Paw Patrol</div>
   <div class="header-sub" id="header-sub"></div>
 </header>
-
-<div id="admin-banner" class="admin-banner" style="display:none">
-  🔒 Admin mode — only you can see this. Share the plain URL with clients.
-</div>
-<div id="client-banner" class="client-banner" style="display:none">
-  🐾 Welcome! Green dates show when I'm available for pet sitting.
-</div>
-
+<div id="admin-banner" class="admin-banner" style="display:none">🔒 Admin mode — only you can see this. Share the plain URL with clients.</div>
+<div id="client-banner" class="client-banner" style="display:none">🐾 Welcome! Green dates show when I'm available for pet sitting.</div>
 <main id="main-content">
-  <div class="loading-screen">
-    <div class="spinner"></div>
-    <div class="loading-text">Loading availability…</div>
-  </div>
+  <div class="loading-screen"><div class="spinner"></div><div class="loading-text">Loading availability…</div></div>
 </main>
-
 <script>
-/* ══════════════════════════════════════════
-   🔧 CONFIGURATION — fill in after Supabase setup
-   ══════════════════════════════════════════ */
-var SUPABASE_URL = 'https://xdwjejxfiyyymkfjwoxf.supabase.co';       // e.g. https://abcdefgh.supabase.co
-var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2planhmaXl5eW1rZmp3b3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MTAyNjksImV4cCI6MjA5NTM4NjI2OX0._SZhB0TbdqvpwMFRt95rbpqt8pZLk3_3e25n3TEhbpo'; // long key from Supabase dashboard
-
-/* ══════════════════════════════════════════
-   STATE
-   ══════════════════════════════════════════ */
-var ds = {}, bks = [];
-var cy, cm;
-var IS_ADMIN = window.location.search.includes('admin');
-var MN = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-var DN = ['Su','Mo','Tu','We','Th','Fr','Sa'];
-var isSaving = false;
-
-/* ══════════════════════════════════════════
-   DATE UTILS
-   ══════════════════════════════════════════ */
-function tk(d)  { return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
-function pad(n) { return String(n).padStart(2,'0'); }
-function pk(k)  { var p=k.split('-'); return new Date(+p[0],+p[1]-1,+p[2]); }
-function dbet(s,e) { return Math.round((pk(e)-pk(s))/864e5); }
-function ms2(y,m)  { return y+'-'+pad(m+1)+'-01'; }
-function me2(y,m)  { return y+'-'+pad(m+1)+'-'+pad(new Date(y,m+1,0).getDate()); }
-function fmtDate(k){ var d=pk(k); return MN[d.getMonth()].slice(0,3)+' '+d.getDate()+', '+d.getFullYear(); }
-function mr(s,e,st){ var d=pk(s),end=pk(e); while(d<=end){ds[tk(d)]=st;d.setDate(d.getDate()+1);} }
-
-/* ══════════════════════════════════════════
-   SUPABASE API HELPERS
-   ══════════════════════════════════════════ */
-function sbFetch(path, method, body) {
-  return fetch(SUPABASE_URL + '/rest/v1/' + path, {
-    method: method || 'GET',
-    headers: {
-      'apikey': SUPABASE_ANON_KEY,
-      'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
-      'Content-Type': 'application/json',
-      'Prefer': method === 'POST' ? 'return=representation' : ''
-    },
-    body: body ? JSON.stringify(body) : undefined
-  }).then(function(r) { return r.json(); });
-}
-
-function syncStatus(msg, cls) {
-  var el = document.getElementById('sync-status');
-  if (!el) return;
-  el.textContent = msg;
-  el.className = 'sync-status ' + (cls||'');
-}
-
-/* ── LOAD from Supabase ── */
-function loadFromDB() {
-  return Promise.all([
-    sbFetch('day_states?select=date,state'),
-    sbFetch('bookings?select=*&order=start_date.asc')
-  ]).then(function(results) {
-    var days = results[0];
-    var bookings = results[1];
-    ds = {};
-    if (Array.isArray(days)) {
-      days.forEach(function(r){ ds[r.date] = r.state; });
-    }
-    bks = [];
-    if (Array.isArray(bookings)) {
-      bookings.forEach(function(r){
-        bks.push({id:r.id, pet:r.pet_name, own:r.owner_name, s:r.start_date, e:r.end_date, rate:r.rate_per_night, type:r.pet_type});
-      });
-    }
-  });
-}
-
-/* ── SAVE day state ── */
-function saveDayState(date, state) {
-  syncStatus('Saving…', 'syncing');
-  return sbFetch('day_states?date=eq.'+date, 'DELETE').then(function() {
-    if (state) {
-      return sbFetch('day_states', 'POST', {date: date, state: state});
-    }
-  }).then(function() {
-    syncStatus('Saved ✓', 'ok');
-    setTimeout(function(){ syncStatus(''); }, 2000);
-  }).catch(function() {
-    syncStatus('Save failed — check connection', 'err');
-  });
-}
-
-/* ── SAVE range of day states ── */
-function saveDayRange(s, e, state) {
-  syncStatus('Saving…', 'syncing');
-  var dates = [];
-  var d = pk(s), end = pk(e);
-  while(d<=end){ dates.push(tk(d)); d.setDate(d.getDate()+1); }
-
-  // Delete existing, then insert new
-  var deletePromises = dates.map(function(date){
-    return sbFetch('day_states?date=eq.'+date, 'DELETE');
-  });
-  return Promise.all(deletePromises).then(function() {
-    if (!state) return;
-    var inserts = dates.map(function(date){ return {date:date, state:state}; });
-    return sbFetch('day_states', 'POST', inserts);
-  }).then(function() {
-    syncStatus('Saved ✓', 'ok');
-    setTimeout(function(){ syncStatus(''); }, 2000);
-  }).catch(function() {
-    syncStatus('Save failed — check connection', 'err');
-  });
-}
-
-/* ── SAVE booking ── */
-function saveBooking(b) {
-  syncStatus('Saving…', 'syncing');
-  return sbFetch('bookings', 'POST', {
-    pet_name: b.pet,
-    owner_name: b.own,
-    start_date: b.s,
-    end_date: b.e,
-    rate_per_night: b.rate,
-    pet_type: b.type
-  }).then(function(result) {
-    if (result && result[0]) b.id = result[0].id;
-    syncStatus('Saved ✓', 'ok');
-    setTimeout(function(){ syncStatus(''); }, 2000);
-    return result;
-  }).catch(function() {
-    syncStatus('Save failed — check connection', 'err');
-  });
-}
-
-/* ── DELETE booking ── */
-function deleteBookingFromDB(id) {
-  syncStatus('Deleting…', 'syncing');
-  return sbFetch('bookings?id=eq.'+id, 'DELETE').then(function() {
-    syncStatus('Deleted ✓', 'ok');
-    setTimeout(function(){ syncStatus(''); }, 2000);
-  }).catch(function() {
-    syncStatus('Delete failed', 'err');
-  });
-}
-
-/* ── CLEAR ALL ── */
-function clearAllFromDB() {
-  return Promise.all([
-    sbFetch('day_states?state=neq.null', 'DELETE'),
-    sbFetch('bookings?id=gt.0', 'DELETE')
-  ]);
-}
-
-/* ══════════════════════════════════════════
-   NOT CONFIGURED — show setup screen
-   ══════════════════════════════════════════ */
-function isConfigured() {
-  return SUPABASE_URL !== 'https://xdwjejxfiyyymkfjwoxf.supabase.co' && SUPABASE_ANON_KEY !== 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2planhmaXl5eW1rZmp3b3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MTAyNjksImV4cCI6MjA5NTM4NjI2OX0._SZhB0TbdqvpwMFRt95rbpqt8pZLk3_3e25n3TEhbpo';
-}
-
-function showSetupScreen() {
-  document.getElementById('header-sub').textContent = 'Setup required';
-  document.getElementById('main-content').innerHTML = [
-    '<div class="setup-screen">',
-      '<div class="setup-card">',
-        '<h2>🔧 Connect to Supabase</h2>',
-        '<p>Paste your Supabase project URL and anon key below to connect your live database. You only do this once — then upload to GitHub.</p>',
-        '<div class="setup-note">Find these in your Supabase project → Settings → API</div>',
-        '<div class="setup-field"><label>Project URL</label><input id="sb-url" placeholder="https://xxxxxxxx.supabase.co"></div>',
-        '<div class="setup-field"><label>Anon / Public Key</label><input id="sb-key" placeholder="eyJ..."></div>',
-        '<button class="btn-add" onclick="applyConfig()">Generate my index.html ↓</button>',
-      '</div>',
-    '</div>'
-  ].join('');
-}
-
-function applyConfig() {
-  var url = document.getElementById('sb-url').value.trim();
-  var key = document.getElementById('sb-key').value.trim();
-  if (!url || !key) { alert('Please fill in both fields.'); return; }
-
-  // Fetch current page source and replace placeholders
-  fetch(window.location.href)
-    .then(function(r){ return r.text(); })
-    .then(function(html){
-      var updated = html
-        .replace("'https://xdwjejxfiyyymkfjwoxf.supabase.co'", "'"+url+"'")
-        .replace("'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2planhmaXl5eW1rZmp3b3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MTAyNjksImV4cCI6MjA5NTM4NjI2OX0._SZhB0TbdqvpwMFRt95rbpqt8pZLk3_3e25n3TEhbpo'", "'"+key+"'");
-      var blob = new Blob([updated], {type:'text/html'});
-      var a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'index.html';
-      a.click();
-      alert('✅ index.html downloaded! Upload this file to your GitHub repo to go live.');
-    });
-}
-
-/* ══════════════════════════════════════════
-   CALENDAR
-   ══════════════════════════════════════════ */
-function renderCal(containerId, clickable) {
-  var todayKey = tk(new Date());
-  var g = document.getElementById(containerId);
-  if (!g) return;
-  g.innerHTML = DN.map(function(d){ return '<div class="cal-dow">'+d+'</div>'; }).join('');
-  var first = new Date(cy,cm,1).getDay();
-  var dim   = new Date(cy,cm+1,0).getDate();
-  for (var i=0;i<first;i++) g.innerHTML += '<div class="cal-day empty"></div>';
-  for (var d=1;d<=dim;d++) {
-    var key   = cy+'-'+pad(cm+1)+'-'+pad(d);
-    var st    = ds[key]||'';
-    var isPast  = key<todayKey;
-    var isToday = key===todayKey;
-    var cl = 'cal-day';
-    if (st)     cl += ' '+st;
-    if (isToday)cl += ' today';
-    if (isPast&&!st) cl += ' past';
-    var onclick = clickable ? ' onclick="toggleDay(\''+key+'\')" style="cursor:pointer"' : '';
-    g.innerHTML += '<div class="'+cl+'"'+onclick+'>'+d+'</div>';
-  }
-}
-
-/* ══════════════════════════════════════════
-   ADMIN UI
-   ══════════════════════════════════════════ */
-var currentMode = 'booking';
-
-function buildAdmin() {
-  document.getElementById('admin-banner').style.display = 'flex';
-  document.getElementById('header-sub').textContent = 'Admin dashboard';
-  document.body.classList.add('is-admin');
-  var el = document.getElementById('main-content');
-  el.innerHTML = [
-    '<div class="sync-status" id="sync-status"></div>',
-    '<div class="metrics">',
-      '<div class="metric m-sage"><label>This month</label><div class="val" id="m1">0</div><div class="sub">bookings</div></div>',
-      '<div class="metric m-amber"><label>Available days</label><div class="val" id="m2">0</div><div class="sub">marked open</div></div>',
-      '<div class="metric m-violet"><label>Monthly earnings</label><div class="val" id="m3">$0</div><div class="sub">confirmed</div></div>',
-      '<div class="metric m-rose"><label>Avg rate / night</label><div class="val" id="m4">—</div><div class="sub">across bookings</div></div>',
-    '</div>',
-    '<div class="two-col">',
-      '<div class="card">',
-        '<div class="card-title"><div class="card-title-icon">📅</div>Availability calendar</div>',
-        '<div class="cal-nav">',
-          '<button onclick="prevMonth()">&#8249;</button>',
-          '<span class="cal-month" id="cl"></span>',
-          '<button onclick="nextMonth()">&#8250;</button>',
-        '</div>',
-        '<div class="cal-grid" id="cg"></div>',
-        '<div class="cal-legend">',
-          '<div class="leg"><div class="leg-dot" style="background:var(--sage-pale);border:1px solid var(--sage-light)"></div>Available</div>',
-          '<div class="leg"><div class="leg-dot" style="background:var(--violet-pale);border:1px solid var(--violet-light)"></div>Booked</div>',
-          '<div class="leg"><div class="leg-dot" style="background:var(--sand);border:1px solid var(--border)"></div>Blocked</div>',
-        '</div>',
-        '<div class="tip">💡 Click any future day to toggle available. Use the form for ranges or full bookings.</div>',
-      '</div>',
-      '<div class="card">',
-        '<div class="card-title"><div class="card-title-icon">✏️</div>Add entry</div>',
-        '<div class="mode-tabs">',
-          '<button class="mode-tab active" id="mt1" onclick="setMode(\'booking\')">🐶 Booking</button>',
-          '<button class="mode-tab" id="mt2" onclick="setMode(\'blocked\')">🚫 Block off</button>',
-          '<button class="mode-tab" id="mt3" onclick="setMode(\'available\')">✅ Available</button>',
-        '</div>',
-        '<div id="bfields">',
-          '<div class="form-row"><label>Pet name</label><input type="text" id="fp" placeholder="e.g. Bella"></div>',
-          '<div class="form-row"><label>Owner name</label><input type="text" id="fo" placeholder="e.g. Sarah M."></div>',
-          '<div class="form-2col">',
-            '<div class="form-row"><label>Start date</label><input type="date" id="fs"></div>',
-            '<div class="form-row"><label>End date</label><input type="date" id="fe"></div>',
-          '</div>',
-          '<div class="form-2col">',
-            '<div class="form-row"><label>Rate / night ($)</label><input type="number" id="fr2" placeholder="55" min="0"></div>',
-            '<div class="form-row"><label>Pet type</label><select id="ft"><option>Dog</option><option>Cat</option><option>Other</option></select></div>',
-          '</div>',
-        '</div>',
-        '<div id="sfields" style="display:none">',
-          '<div class="form-2col">',
-            '<div class="form-row"><label>Start date</label><input type="date" id="fs2"></div>',
-            '<div class="form-row"><label>End date</label><input type="date" id="fe2"></div>',
-          '</div>',
-        '</div>',
-        '<button class="btn-add" id="addbtn" onclick="addEntry()">🐾 Add booking</button>',
-        '<button class="btn-danger" onclick="clearAll()">🗑 Clear all data</button>',
-      '</div>',
-    '</div>',
-    '<div class="card one-col">',
-      '<div class="card-title"><div class="card-title-icon">📋</div>Bookings</div>',
-      '<div class="booking-list" id="bl"></div>',
-    '</div>'
-  ].join('');
-}
-
-function setMode(m) {
-  currentMode = m;
-  document.getElementById('bfields').style.display = m==='booking' ? 'block' : 'none';
-  document.getElementById('sfields').style.display = m!=='booking' ? 'block' : 'none';
-  document.getElementById('addbtn').textContent = m==='booking' ? '🐾 Add booking' : m==='blocked' ? '🚫 Block off dates' : '✅ Mark available';
-  ['mt1','mt2','mt3'].forEach(function(id){ document.getElementById(id).classList.remove('active'); });
-  document.getElementById(m==='booking'?'mt1':m==='blocked'?'mt2':'mt3').classList.add('active');
-}
-
-function addEntry() {
-  var btn = document.getElementById('addbtn');
-  btn.disabled = true;
-
-  if (currentMode === 'booking') {
-    var pet  = document.getElementById('fp').value.trim();
-    var own  = document.getElementById('fo').value.trim();
-    var s    = document.getElementById('fs').value;
-    var e    = document.getElementById('fe').value;
-    var rate = parseFloat(document.getElementById('fr2').value) || 0;
-    var type = document.getElementById('ft').value;
-    if (!pet||!own||!s||!e) { alert('Please fill in all booking fields.'); btn.disabled=false; return; }
-    if (s>e) { alert('End date must be after start date.'); btn.disabled=false; return; }
-    var newBk = {pet:pet, own:own, s:s, e:e, rate:rate, type:type};
-    mr(s,e,'booked');
-    saveBooking(newBk).then(function(){
-      bks.push(newBk);
-      saveDayRange(s,e,'booked').then(function(){
-        ['fp','fo','fs','fe','fr2'].forEach(function(id){ document.getElementById(id).value=''; });
-        btn.disabled=false;
-        renderAll();
-      });
-    });
-  } else {
-    var s = document.getElementById('fs2').value;
-    var e = document.getElementById('fe2').value;
-    if (!s||!e) { alert('Please select a date range.'); btn.disabled=false; return; }
-    if (s>e)   { alert('End date must be after start date.'); btn.disabled=false; return; }
-    mr(s,e,currentMode);
-    saveDayRange(s, e, currentMode).then(function(){
-      document.getElementById('fs2').value='';
-      document.getElementById('fe2').value='';
-      btn.disabled=false;
-      renderAll();
-    });
-  }
-}
-
-function toggleDay(key) {
-  var todayKey = tk(new Date());
-  if (key<todayKey) return;
-  var cur = ds[key];
-  if (cur==='booked') return;
-  var newState = cur ? null : 'available';
-  if (newState) ds[key] = newState;
-  else delete ds[key];
-  renderAll();
-  saveDayState(key, newState);
-}
-
-function deleteBooking(id) {
-  var idx = bks.findIndex(function(b){ return b.id===id; });
-  if (idx<0) return;
-  var b = bks[idx];
-  var d=pk(b.s), end=pk(b.e);
-  while(d<=end){ delete ds[tk(d)]; d.setDate(d.getDate()+1); }
-  bks.splice(idx,1);
-  renderAll();
-  deleteBookingFromDB(id).then(function(){
-    // also clear the day states
-    saveDayRange(b.s, b.e, null);
-  });
-}
-
-function clearAll() {
-  if (!confirm('Clear all bookings and availability? This cannot be undone.')) return;
-  ds={}; bks=[];
-  clearAllFromDB();
-  renderAll();
-}
-
-function renderBookings() {
-  var bl = document.getElementById('bl');
-  if (!bl) return;
-  if (!bks.length) {
-    bl.innerHTML = '<div class="empty-state"><div class="paw-hint">🐾</div>No bookings yet — add your first one above!</div>';
-    return;
-  }
-  var sorted = bks.slice().sort(function(a,b){ return a.s.localeCompare(b.s); });
-  var todayKey = tk(new Date());
-  bl.innerHTML = sorted.map(function(b) {
-    var nights = dbet(b.s, b.e);
-    var total  = b.rate * nights;
-    var done   = b.e < todayKey;
-    var badge  = done ? '<span class="badge badge-done">Completed</span>' : '<span class="badge badge-upcoming">Upcoming</span>';
-    var emoji  = b.type==='Cat'?'🐱':b.type==='Dog'?'🐶':'🐾';
-    return '<div class="booking-item">'
-      +'<div><div class="booking-pet">'+emoji+' '+b.pet+' &nbsp;'+badge+'</div>'
-      +'<div class="booking-owner">Owner: '+b.own+'</div>'
-      +'<div class="booking-meta">'+fmtDate(b.s)+' → '+fmtDate(b.e)+' &nbsp;·&nbsp; '+nights+' night'+(nights!==1?'s':'')+' &nbsp;·&nbsp; $'+b.rate+'/night</div></div>'
-      +'<div class="booking-right">'
-      +(b.rate>0?'<div class="booking-total">$'+total.toLocaleString()+'</div>':'')
-      +'<button class="del-btn" onclick="deleteBooking('+b.id+')" title="Remove">×</button>'
-      +'</div></div>';
-  }).join('');
-}
-
-function updateMetrics() {
-  var ms=ms2(cy,cm), me=me2(cy,cm);
-  var mb    = bks.filter(function(b){ return b.s<=me && b.e>=ms; });
-  var avail = Object.entries(ds).filter(function(e){ return e[1]==='available' && e[0]>=ms && e[0]<=me; }).length;
-  var earn  = 0;
-  mb.forEach(function(b){
-    var s=b.s<ms?ms:b.s, e=b.e>me?me:b.e;
-    earn += b.rate * dbet(s,e);
-  });
-  var rates = bks.map(function(b){ return b.rate; }).filter(function(r){ return r>0; });
-  var avg   = rates.length ? Math.round(rates.reduce(function(a,b){ return a+b; },0)/rates.length) : null;
-  document.getElementById('m1').textContent = mb.length;
-  document.getElementById('m2').textContent = avail;
-  document.getElementById('m3').textContent = '$'+earn.toLocaleString();
-  document.getElementById('m4').textContent = avg ? '$'+avg : '—';
-}
-
-function renderAll() {
-  document.getElementById('cl').textContent = MN[cm]+' '+cy;
-  renderCal('cg', true);
-  renderBookings();
-  updateMetrics();
-}
-
-/* ══════════════════════════════════════════
-   CLIENT UI
-   ══════════════════════════════════════════ */
-function buildClient() {
-  document.getElementById('client-banner').style.display = 'flex';
-  document.getElementById('header-sub').textContent = 'Availability';
-  var todayKey = tk(new Date());
-  var availDays = Object.entries(ds)
-    .filter(function(e){ return e[1]==='available' && e[0]>=todayKey; })
-    .sort(function(a,b){ return a[0].localeCompare(b[0]); })
-    .slice(0, 12);
-  var availList = availDays.length
-    ? availDays.map(function(e){ return '<div class="avail-date-item"><span>🟢</span>'+fmtDate(e[0])+'</div>'; }).join('')
-    : '<div style="color:var(--text-light);font-size:14px;font-style:italic;padding:8px 0">No availability marked yet — check back soon!</div>';
-  document.getElementById('main-content').innerHTML = [
-    '<div class="client-intro"><h1>Pet Sitting Availability</h1>',
-    '<p>Browse the calendar below to see open dates. Green days are available — reach out to book!</p></div>',
-    '<div class="client-cal-wrap"><div class="card">',
-      '<div class="cal-nav"><button onclick="prevMonth()">&#8249;</button><span class="cal-month" id="cl"></span><button onclick="nextMonth()">&#8250;</button></div>',
-      '<div class="cal-grid" id="cg"></div>',
-    '</div></div>',
-    '<div class="client-legend-wrap">',
-      '<div class="leg"><div class="leg-dot" style="background:var(--sage-pale);border:1px solid var(--sage-light)"></div>Available</div>',
-      '<div class="leg"><div class="leg-dot" style="background:var(--violet-pale);border:1px solid var(--violet-light)"></div>Booked / unavailable</div>',
-    '</div>',
-    '<div class="avail-summary"><h3>📋 Upcoming available dates</h3><div class="avail-date-list">'+availList+'</div></div>',
-    '<div class="contact-cta">📬 To book, reach out directly — <strong>your contact info here</strong></div>'
-  ].join('');
-}
-
-function renderClient() {
-  document.getElementById('cl').textContent = MN[cm]+' '+cy;
-  renderCal('cg', false);
-}
-
-/* ══════════════════════════════════════════
-   NAV & INIT
-   ══════════════════════════════════════════ */
-function prevMonth() { cm--; if(cm<0){cm=11;cy--;} IS_ADMIN ? renderAll() : renderClient(); }
-function nextMonth() { cm++; if(cm>11){cm=0;cy++;} IS_ADMIN ? renderAll() : renderClient(); }
-
-function init() {
-  var now = new Date(); cy=now.getFullYear(); cm=now.getMonth();
-
-  if (!isConfigured()) {
-    showSetupScreen();
-    return;
-  }
-
-  loadFromDB().then(function() {
-    if (IS_ADMIN) {
-      buildAdmin();
-      renderAll();
-    } else {
-      buildClient();
-      renderClient();
-    }
-  }).catch(function() {
-    document.getElementById('main-content').innerHTML =
-      '<div class="loading-screen"><div style="font-size:14px;color:var(--rose)">⚠️ Could not connect to database. Check your Supabase URL and key.</div></div>';
-  });
-}
-
+var SUPABASE_URL = 'https://xdwjejxfiyyymkfjwoxf.supabase.co';
+var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2planhmaXl5eW1rZmp3b3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MTAyNjksImV4cCI6MjA5NTM4NjI2OX0._SZhB0TbdqvpwMFRt95rbpqt8pZLk3_3e25n3TEhbpo';
+var ds={},bks=[],cy,cm;
+var IS_ADMIN=window.location.search.includes('admin');
+var MN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+var DN=['Su','Mo','Tu','We','Th','Fr','Sa'];
+function tk(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function pad(n){return String(n).padStart(2,'0');}
+function pk(k){var p=k.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
+function dbet(s,e){return Math.round((pk(e)-pk(s))/864e5);}
+function ms2(y,m){return y+'-'+pad(m+1)+'-01';}
+function me2(y,m){return y+'-'+pad(m+1)+'-'+pad(new Date(y,m+1,0).getDate());}
+function fmtDate(k){var d=pk(k);return MN[d.getMonth()].slice(0,3)+' '+d.getDate()+', '+d.getFullYear();}
+function mr(s,e,st){var d=pk(s),end=pk(e);while(d<=end){ds[tk(d)]=st;d.setDate(d.getDate()+1);}}
+function sbFetch(path,method,body){return fetch(SUPABASE_URL+'/rest/v1/'+path,{method:method||'GET',headers:{'apikey':SUPABASE_ANON_KEY,'Authorization':'Bearer '+SUPABASE_ANON_KEY,'Content-Type':'application/json','Prefer':method==='POST'?'return=representation':''},body:body?JSON.stringify(body):undefined}).then(function(r){return r.json();});}
+function syncStatus(msg,cls){var el=document.getElementById('sync-status');if(!el)return;el.textContent=msg;el.className='sync-status '+(cls||'');}
+function loadFromDB(){return Promise.all([sbFetch('day_states?select=date,state'),sbFetch('bookings?select=*&order=start_date.asc')]).then(function(results){ds={};if(Array.isArray(results[0])){results[0].forEach(function(r){ds[r.date]=r.state;});}bks=[];if(Array.isArray(results[1])){results[1].forEach(function(r){bks.push({id:r.id,pet:r.pet_name,own:r.owner_name,s:r.start_date,e:r.end_date,rate:r.rate_per_night,type:r.pet_type});});}});}
+function saveDayState(date,state){syncStatus('Saving…','syncing');return sbFetch('day_states?date=eq.'+date,'DELETE').then(function(){if(state){return sbFetch('day_states','POST',{date:date,state:state});}}).then(function(){syncStatus('Saved ✓','ok');setTimeout(function(){syncStatus('');},2000);}).catch(function(){syncStatus('Save failed','err');});}
+function saveDayRange(s,e,state){syncStatus('Saving…','syncing');var dates=[],d=pk(s),end=pk(e);while(d<=end){dates.push(tk(d));d.setDate(d.getDate()+1);}return Promise.all(dates.map(function(date){return sbFetch('day_states?date=eq.'+date,'DELETE');})).then(function(){if(!state)return;return sbFetch('day_states','POST',dates.map(function(date){return{date:date,state:state};}));}).then(function(){syncStatus('Saved ✓','ok');setTimeout(function(){syncStatus('');},2000);}).catch(function(){syncStatus('Save failed','err');});}
+function saveBooking(b){syncStatus('Saving…','syncing');return sbFetch('bookings','POST',{pet_name:b.pet,owner_name:b.own,start_date:b.s,end_date:b.e,rate_per_night:b.rate,pet_type:b.type}).then(function(result){if(result&&result[0])b.id=result[0].id;syncStatus('Saved ✓','ok');setTimeout(function(){syncStatus('');},2000);return result;}).catch(function(){syncStatus('Save failed','err');});}
+function deleteBookingFromDB(id){syncStatus('Deleting…','syncing');return sbFetch('bookings?id=eq.'+id,'DELETE').then(function(){syncStatus('Deleted ✓','ok');setTimeout(function(){syncStatus('');},2000);}).catch(function(){syncStatus('Delete failed','err');});}
+function clearAllFromDB(){return Promise.all([sbFetch('day_states?state=neq.null','DELETE'),sbFetch('bookings?id=gt.0','DELETE')]);}
+function isConfigured(){return SUPABASE_URL!=='YOUR_SUPABASE_URL'&&SUPABASE_ANON_KEY!=='YOUR_SUPABASE_ANON_KEY';}
+var currentMode='booking';
+function buildAdmin(){document.getElementById('admin-banner').style.display='flex';document.getElementById('header-sub').textContent='Admin dashboard';document.body.classList.add('is-admin');var el=document.getElementById('main-content');el.innerHTML=['<div class="sync-status" id="sync-status"></div>','<div class="metrics">','<div class="metric m-sage"><label>This month</label><div class="val" id="m1">0</div><div class="sub">bookings</div></div>','<div class="metric m-amber"><label>Available days</label><div class="val" id="m2">0</div><div class="sub">marked open</div></div>','<div class="metric m-violet"><label>Monthly earnings</label><div class="val" id="m3">$0</div><div class="sub">confirmed</div></div>','<div class="metric m-rose"><label>Avg rate / night</label><div class="val" id="m4">—</div><div class="sub">across bookings</div></div>','</div>','<div class="two-col">','<div class="card">','<div class="card-title"><div class="card-title-icon">📅</div>Availability calendar</div>','<div class="cal-nav"><button onclick="prevMonth()">&#8249;</button><span class="cal-month" id="cl"></span><button onclick="nextMonth()">&#8250;</button></div>','<div class="cal-grid" id="cg"></div>','<div class="cal-legend"><div class="leg"><div class="leg-dot" style="background:var(--sage-pale);border:1px solid var(--sage-light)"></div>Available</div><div class="leg"><div class="leg-dot" style="background:var(--violet-pale);border:1px solid var(--violet-light)"></div>Booked</div><div class="leg"><div class="leg-dot" style="background:var(--sand);border:1px solid var(--border)"></div>Blocked</div></div>','<div class="tip">💡 Click any future day to toggle available. Use the form for ranges or full bookings.</div>','</div>','<div class="card">','<div class="card-title"><div class="card-title-icon">✏️</div>Add entry</div>','<div class="mode-tabs"><button class="mode-tab active" id="mt1" onclick="setMode(\'booking\')">🐶 Booking</button><button class="mode-tab" id="mt2" onclick="setMode(\'blocked\')">🚫 Block off</button><button class="mode-tab" id="mt3" onclick="setMode(\'available\')">✅ Available</button></div>','<div id="bfields"><div class="form-row"><label>Pet name</label><input type="text" id="fp" placeholder="e.g. Bella"></div><div class="form-row"><label>Owner name</label><input type="text" id="fo" placeholder="e.g. Sarah M."></div><div class="form-2col"><div class="form-row"><label>Start date</label><input type="date" id="fs"></div><div class="form-row"><label>End date</label><input type="date" id="fe"></div></div><div class="form-2col"><div class="form-row"><label>Rate / night ($)</label><input type="number" id="fr2" placeholder="55" min="0"></div><div class="form-row"><label>Pet type</label><select id="ft"><option>Dog</option><option>Cat</option><option>Other</option></select></div></div></div>','<div id="sfields" style="display:none"><div class="form-2col"><div class="form-row"><label>Start date</label><input type="date" id="fs2"></div><div class="form-row"><label>End date</label><input type="date" id="fe2"></div></div></div>','<button class="btn-add" id="addbtn" onclick="addEntry()">🐾 Add booking</button>','<button class="btn-danger" onclick="clearAll()">🗑 Clear all data</button>','</div>','</div>','<div class="card one-col"><div class="card-title"><div class="card-title-icon">📋</div>Bookings</div><div class="booking-list" id="bl"></div></div>'].join('');}
+function setMode(m){currentMode=m;document.getElementById('bfields').style.display=m==='booking'?'block':'none';document.getElementById('sfields').style.display=m!=='booking'?'block':'none';document.getElementById('addbtn').textContent=m==='booking'?'🐾 Add booking':m==='blocked'?'🚫 Block off dates':'✅ Mark available';['mt1','mt2','mt3'].forEach(function(id){document.getElementById(id).classList.remove('active');});document.getElementById(m==='booking'?'mt1':m==='blocked'?'mt2':'mt3').classList.add('active');}
+function addEntry(){var btn=document.getElementById('addbtn');btn.disabled=true;if(currentMode==='booking'){var pet=document.getElementById('fp').value.trim();var own=document.getElementById('fo').value.trim();var s=document.getElementById('fs').value;var e=document.getElementById('fe').value;var rate=parseFloat(document.getElementById('fr2').value)||0;var type=document.getElementById('ft').value;if(!pet||!own||!s||!e){alert('Please fill in all booking fields.');btn.disabled=false;return;}if(s>e){alert('End date must be after start date.');btn.disabled=false;return;}var newBk={pet:pet,own:own,s:s,e:e,rate:rate,type:type};mr(s,e,'booked');saveBooking(newBk).then(function(){bks.push(newBk);saveDayRange(s,e,'booked').then(function(){['fp','fo','fs','fe','fr2'].forEach(function(id){document.getElementById(id).value='';});btn.disabled=false;renderAll();});});}else{var s=document.getElementById('fs2').value;var e=document.getElementById('fe2').value;if(!s||!e){alert('Please select a date range.');btn.disabled=false;return;}if(s>e){alert('End date must be after start date.');btn.disabled=false;return;}mr(s,e,currentMode);saveDayRange(s,e,currentMode).then(function(){document.getElementById('fs2').value='';document.getElementById('fe2').value='';btn.disabled=false;renderAll();});}}
+function toggleDay(key){var todayKey=tk(new Date());if(key<todayKey)return;var cur=ds[key];if(cur==='booked')return;var newState=cur?null:'available';if(newState)ds[key]=newState;else delete ds[key];renderAll();saveDayState(key,newState);}
+function deleteBooking(id){var idx=bks.findIndex(function(b){return b.id===id;});if(idx<0)return;var b=bks[idx];var d=pk(b.s),end=pk(b.e);while(d<=end){delete ds[tk(d)];d.setDate(d.getDate()+1);}bks.splice(idx,1);renderAll();deleteBookingFromDB(id).then(function(){saveDayRange(b.s,b.e,null);});}
+function clearAll(){if(!confirm('Clear all bookings and availability? This cannot be undone.'))return;ds={};bks=[];clearAllFromDB();renderAll();}
+function renderBookings(){var bl=document.getElementById('bl');if(!bl)return;if(!bks.length){bl.innerHTML='<div class="empty-state"><div class="paw-hint">🐾</div>No bookings yet — add your first one above!</div>';return;}var sorted=bks.slice().sort(function(a,b){return a.s.localeCompare(b.s);});var todayKey=tk(new Date());bl.innerHTML=sorted.map(function(b){var nights=dbet(b.s,b.e);var total=b.rate*nights;var done=b.e<todayKey;var badge=done?'<span class="badge badge-done">Completed</span>':'<span class="badge badge-upcoming">Upcoming</span>';var emoji=b.type==='Cat'?'🐱':b.type==='Dog'?'🐶':'🐾';return'<div class="booking-item"><div><div class="booking-pet">'+emoji+' '+b.pet+' &nbsp;'+badge+'</div><div class="booking-owner">Owner: '+b.own+'</div><div class="booking-meta">'+fmtDate(b.s)+' → '+fmtDate(b.e)+' &nbsp;·&nbsp; '+nights+' night'+(nights!==1?'s':'')+' &nbsp;·&nbsp; $'+b.rate+'/night</div></div><div class="booking-right">'+(b.rate>0?'<div class="booking-total">$'+total.toLocaleString()+'</div>':'')+'<button class="del-btn" onclick="deleteBooking('+b.id+')" title="Remove">×</button></div></div>';}).join('');}
+function updateMetrics(){var ms=ms2(cy,cm),me=me2(cy,cm);var mb=bks.filter(function(b){return b.s<=me&&b.e>=ms;});var avail=Object.entries(ds).filter(function(e){return e[1]==='available'&&e[0]>=ms&&e[0]<=me;}).length;var earn=0;mb.forEach(function(b){var s=b.s<ms?ms:b.s,e=b.e>me?me:b.e;earn+=b.rate*dbet(s,e);});var rates=bks.map(function(b){return b.rate;}).filter(function(r){return r>0;});var avg=rates.length?Math.round(rates.reduce(function(a,b){return a+b;},0)/rates.length):null;document.getElementById('m1').textContent=mb.length;document.getElementById('m2').textContent=avail;document.getElementById('m3').textContent='$'+earn.toLocaleString();document.getElementById('m4').textContent=avg?'$'+avg:'—';}
+function renderAll(){document.getElementById('cl').textContent=MN[cm]+' '+cy;renderCal('cg',true);renderBookings();updateMetrics();}
+function renderCal(containerId,clickable){var todayKey=tk(new Date());var g=document.getElementById(containerId);if(!g)return;g.innerHTML=DN.map(function(d){return'<div class="cal-dow">'+d+'</div>';}).join('');var first=new Date(cy,cm,1).getDay();var dim=new Date(cy,cm+1,0).getDate();for(var i=0;i<first;i++)g.innerHTML+='<div class="cal-day empty"></div>';for(var d=1;d<=dim;d++){var key=cy+'-'+pad(cm+1)+'-'+pad(d);var st=ds[key]||'';var isPast=key<todayKey;var isToday=key===todayKey;var cl='cal-day';if(st)cl+=' '+st;if(isToday)cl+=' today';if(isPast&&!st)cl+=' past';var onclick=clickable?' onclick="toggleDay(\''+key+'\')" style="cursor:pointer"':'';g.innerHTML+='<div class="'+cl+'"'+onclick+'>'+d+'</div>';}}
+function buildClient(){document.getElementById('client-banner').style.display='flex';document.getElementById('header-sub').textContent='Availability';var todayKey=tk(new Date());var availDays=Object.entries(ds).filter(function(e){return e[1]==='available'&&e[0]>=todayKey;}).sort(function(a,b){return a[0].localeCompare(b[0]);}).slice(0,12);var availList=availDays.length?availDays.map(function(e){return'<div class="avail-date-item"><span>🟢</span>'+fmtDate(e[0])+'</div>';}).join(''):'<div style="color:var(--text-light);font-size:14px;font-style:italic;padding:8px 0">No availability marked yet — check back soon!</div>';document.getElementById('main-content').innerHTML=['<div class="client-intro"><h1>Pet Sitting Availability</h1><p>Browse the calendar below to see open dates. Green days are available — reach out to book!</p></div>','<div class="client-cal-wrap"><div class="card"><div class="cal-nav"><button onclick="prevMonth()">&#8249;</button><span class="cal-month" id="cl"></span><button onclick="nextMonth()">&#8250;</button></div><div class="cal-grid" id="cg"></div></div></div>','<div class="client-legend-wrap"><div class="leg"><div class="leg-dot" style="background:var(--sage-pale);border:1px solid var(--sage-light)"></div>Available</div><div class="leg"><div class="leg-dot" style="background:var(--violet-pale);border:1px solid var(--violet-light)"></div>Booked / unavailable</div></div>','<div class="avail-summary"><h3>📋 Upcoming available dates</h3><div class="avail-date-list">'+availList+'</div></div>','<div class="contact-cta">📬 To book, reach out directly — <strong>your contact info here</strong></div>'].join('');}
+function renderClient(){document.getElementById('cl').textContent=MN[cm]+' '+cy;renderCal('cg',false);}
+function prevMonth(){cm--;if(cm<0){cm=11;cy--;}IS_ADMIN?renderAll():renderClient();}
+function nextMonth(){cm++;if(cm>11){cm=0;cy++;}IS_ADMIN?renderAll():renderClient();}
+function init(){var now=new Date();cy=now.getFullYear();cm=now.getMonth();if(!isConfigured()){document.getElementById('header-sub').textContent='Setup required';return;}loadFromDB().then(function(){if(IS_ADMIN){buildAdmin();renderAll();}else{buildClient();renderClient();}}).catch(function(){document.getElementById('main-content').innerHTML='<div class="loading-screen"><div style="font-size:14px;color:var(--rose)">⚠️ Could not connect to database. Check your Supabase URL and key.</div></div>';});}
 init();
 </script>
 </body>
